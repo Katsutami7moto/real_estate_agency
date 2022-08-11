@@ -15,10 +15,11 @@ class FlatAdmin(admin.ModelAdmin):
         'new_building', 'rooms_number', 
         'has_balcony', 'active',
     )
+    raw_id_fields = ('liked_by',)
 
 
 class ComplaintAdmin(admin.ModelAdmin):
-    raw_id_fields = ('complaining_user', 'complaint_flat',)
+    raw_id_fields = ('user', 'flat',)
 
 
 admin.site.register(Flat, FlatAdmin)

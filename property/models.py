@@ -97,7 +97,7 @@ class Complaint(models.Model):
         Flat,
         on_delete=models.SET_NULL,
         verbose_name='Квартира, на которую пожаловались',
-        related_name='flats',
+        related_name='complaints',
         null=True
     )
     text = models.TextField(
